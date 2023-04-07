@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>à propos</title>
+    <title>Nous écrire</title>
 </head>
 <body>
     <div>    
@@ -22,18 +22,22 @@
     </div>
 
     <div class="card">
-        <h1>A propos</h1>
-        <p>
-            Ce site a été confectionné par une personne comme vous qui aime regarder des films/animés ou séries, et écouter de la musique.
-        </p>
-        <p>
-            Ainsi, vous y trouverez essentiellement ses impressions sur ce qu'elle a eu à regarder dans les différentes rubriques
-            que vous propose ce site.
-        </p>
-        <p> Nous espérons que vous y apprendez beaucoup de choses et que vous y trouverez votre bonheur.</p>
-        <p>- Cherry-san &#128151</p>
-        
-        <img src="https://media0.giphy.com/media/MeIucAjPKoA120R7sN/giphy.gif" id="cheer">
+        <h1>Nous écrire</h1>
+        <form action="/action_page.php" method="get">
+            <label for="fname">Votre nom :</label>
+            <input type="text" name="fname" placeholder="Entrez votre nom"><br><br>
+
+            <label for="lname">Votre prénom:</label>
+            <input type="text" name="lname" placeholder="Entrez votre prénom"><br><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" placeholder="Entrez votre email" name="email"><br><br>
+
+            <label for="message">Votre message :</label><br><br>
+            <textarea id="message" placeholder="taille max 500 caractères" name="message" maxlength="500" rows="20" cols="100"></textarea><br><br>
+
+            <input type="submit" value="Envoyer">
+          </form> 
     </div>
 </body>
 </html>
