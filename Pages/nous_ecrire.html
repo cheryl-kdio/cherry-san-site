@@ -22,21 +22,21 @@
     </div>
     <div class="card">
         <h1>Nous écrire</h1>
-        <form method="get">
-            <label for="fname">Votre nom :</label>
-            <input type="text" name="fname" placeholder="Entrez votre nom"><br><br>
+        <form method="post" action="../mail.php">
+            <label for="name">Nom:</label><br><br>
+            <input type="text" name="subject" id="name" required placeholder="Nom" /><br><br>
 
-            <label for="lname">Votre prénom:</label>
-            <input type="text" name="lname" placeholder="Entrez votre prénom"><br><br>
+            <label for="name">Objet Du Message:</label><br><br>
+            <input type="text" name="sujet" id="subject" required placeholder="Sujet" /><br><br>
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" placeholder="Entrez votre email" name="email"><br><br>
+            <label for="email">Email:</label><br><br>
+            <input type="email" name="email" id="email" required placeholder="email@exemple.com" /><br><br>
 
-            <label for="message">Votre message :</label><br><br>
-            <textarea id="message" placeholder="taille max 500 caractères" name="message" maxlength="500" rows="20" cols="100"></textarea><br><br>
+            <label for="message">Message:</label><br><br>
+            <textarea name="message" id="message" rows="10" cols="100" required></textarea><br><br>
 
-            <input type="submit" value="Envoyer">
-          </form> 
+            <input type="submit" value="Envoyer Mon Message" />
+          </form>
     </div>
 </body>
 </html>
