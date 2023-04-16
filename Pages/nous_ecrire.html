@@ -22,21 +22,30 @@
     </div>
     <div class="card">
         <h1>Nous écrire</h1>
-        <form method="post" action="../mail.php">
-            <label for="name">Nom:</label><br><br>
-            <input type="text" name="subject" id="name" required placeholder="Nom" /><br><br>
-
-            <label for="name">Objet Du Message:</label><br><br>
-            <input type="text" name="sujet" id="subject" required placeholder="Sujet" /><br><br>
-
-            <label for="email">Email:</label><br><br>
-            <input type="email" name="email" id="email" required placeholder="email@exemple.com" /><br><br>
-
-            <label for="message">Message:</label><br><br>
-            <textarea name="message" id="message" rows="10" cols="100" required></textarea><br><br>
-
-            <input type="submit" value="Envoyer Mon Message" />
-          </form>
+        <p>Une remarque? une suggestion? n'hesitez à m'écrire.</p>
+        <form action="../Pages/mail.php" method="post">
+            <div>
+                <label for="nom">Votre nom :</label><br>
+                <input type="text" id="nom" name="nom"> <br><br>
+            </div>
+            <div>
+                <label for="prenom">Votre prénom :</label><br>
+                <input type="text" id="prenom" name="prenom" > <br><br>
+            </div>
+            <div>
+                <label for="objet">Objet de votre message:</label><br>
+                <input type="text" id="objet" name="objet"><br><br>
+            </div>
+            <div>
+                <label for="mail">Votre e-mail (obligatoire):</label><br>
+                <input type="email" id="mail" name="mail" placeholder="nom@example.com" required><br><br>
+            </div>
+            <div>
+                <label for="msg">Votre message :</label><br>
+                <textarea id="msg" name="msg" rows="10" cols="100" maxlength="500" placeholder="Taille maximale : 500 caractères."></textarea>
+            </div>
+            <input type="submit" value="Envoyer">
+        </form>        
     </div>
 </body>
 </html>

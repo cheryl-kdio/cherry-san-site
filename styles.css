@@ -51,7 +51,7 @@ ul.menu {
 /* 'a propos' tab*/
 #cheer{
   display: block;
-  width: 30%;
+  margin: 30%;
 }
 
 /*Cick button for card*/
@@ -80,6 +80,7 @@ a.button:focus {
   border-bottom: 5px solid #c50000;
   padding: 1rem;
   display: block;
+  background-color: whitesmoke;
 }
 
 .card-image{
@@ -120,4 +121,5 @@ a.button:focus {
 th{
   width: 50%;
   text-align: justify;
+  border: 2px solid black;
 }
