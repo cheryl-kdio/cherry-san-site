@@ -1,16 +1,25 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
-  ul.menu li {float: none;}
+  ul.menu li {
+    float: none;
+  }
 }
 
-body{
-    color:black;
-    font-size: 1em;
-    margin-left: 10%;
-    margin-right: 10% ;
+body {
+  color: black;
+  font-size: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h2,
+h3 {
+  font-family: cursive;
 }
 
 /*navigation bar*/
@@ -30,9 +39,10 @@ ul.menu {
   border-bottom: 5px solid #c50000;
 }
 
-.menu li,#logo{
+.menu li,
+#logo {
   float: left;
-} 
+}
 
 .menu li a {
   display: block;
@@ -44,12 +54,12 @@ ul.menu {
 }
 
 .menu li a:hover {
-  background-color:indianred;
+  background-color: indianred;
 }
 
 
 /* 'a propos' tab*/
-#cheer{
+#cheer {
   display: block;
   width: 30%;
 }
@@ -77,30 +87,35 @@ a.button:focus {
 
 /*card parameters*/
 .card {
-  border-bottom: 5px solid #c50000;
+  border: 3px solid #076b02;
   padding: 1rem;
+  margin: 1rem;
   display: block;
   background-color: whitesmoke;
 }
 
-.card-image{
-  height: 300px;
-  width: auto;
+.card-image {
+  height: 350px;
+  width: 300px;
+  display: block;
   padding: 5px;
+  margin: auto;
 }
 
-.card-title, h1{
+.card-title,
+h1 {
   font-family: Snell Roundhand, cursive;
-  letter-spacing:1px;
+  letter-spacing: 1px;
   font-size: 30px;
   text-align: center;
-  width:160px;
-  margin:auto;
-  white-space:nowrap;
-  padding-bottom:13px;
+  width: 160px;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 13px;
 }
 
-.card-title:after, h1:after{
+.card-title:after,
+h1::after {
   background-color: #c50000;
   content: '';
   display: block;
@@ -109,17 +124,35 @@ a.button:focus {
   margin-bottom: 5px;
 }
 
-.card-content{
+.card-content {
   justify-content: space-between;
-  flex-direction: row;
-  display:flex;
-  padding:2px;
+  display: block;
+  padding: 2px;
   font-weight: lighter;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-/*table*/
-th{
-  width: 50%;
-  text-align: justify;
-  border: 2px solid black;
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container div {
+  flex: 1;
+  padding: 10px;
+}
+
+.flex-image {
+  height: 200px;
+  width: 150px;
+  display: block;
+  padding: 5px;
+  margin: auto;
+}
+
+.scrollbar {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  display: inline-block;
+  white-space: nowrap;
 }
