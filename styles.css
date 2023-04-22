@@ -5,8 +5,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  ul.menu li {
-    float: none;
+  body {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -67,7 +68,7 @@ ul.menu {
 /*Cick button for card*/
 a.button {
   align-items: center;
-  background-color: #3d4852;
+  background-color: #076b02;
   border: 1px solid #3d4852;
   border-radius: 4px;
   color: white;
@@ -81,7 +82,7 @@ a.button {
 
 a.button:hover,
 a.button:focus {
-  background-color: #58636F;
+  background-color: #4bea43;
   box-shadow: 0 0 2px 2px #bac6d3;
 }
 
@@ -155,4 +156,12 @@ h1::after {
   overflow-x: auto;
   display: inline-block;
   white-space: nowrap;
+}
+
+table,
+th,
+tr {
+  text-align: left;
+  border: 1px solid black;
+  font-weight: lighter;
 }
