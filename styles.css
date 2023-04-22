@@ -12,7 +12,8 @@
 }
 
 body {
-  color: black;
+  color: white;
+  background-color: black;
   font-size: 1em;
   margin-left: 10%;
   margin-right: 10%;
@@ -36,7 +37,7 @@ ul.menu {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   border-bottom: 5px solid #c50000;
 }
 
@@ -63,6 +64,7 @@ ul.menu {
 #cheer {
   display: block;
   width: 30%;
+  margin: auto;
 }
 
 /*Cick button for card*/
@@ -92,7 +94,7 @@ a.button:focus {
   padding: 1rem;
   margin: 1rem;
   display: block;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.686);
 }
 
 .card-image {
@@ -162,6 +164,15 @@ table,
 th,
 tr {
   text-align: left;
-  border: 1px solid black;
+  border: 1px solid white;
   font-weight: lighter;
+}
+
+h2::after {
+  background-color: white;
+  content: '';
+  display: block;
+  height: 1px;
+  width: auto;
+  margin-bottom: 2px;
 }
