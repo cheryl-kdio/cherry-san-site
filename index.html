@@ -6,134 +6,225 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/92aa274529.js" crossorigin="anonymous"></script>
     <title>cherry-san.com</title>
 </head>
 
 <body>
-    <div>
-        <ul class="menu">
+    <!--Navigation bar-->
+    <div class="navbar">
+        <div>
             <img src="images/Cherry-san.png" id="logo">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="Pages/anime.html">Anime</a></li>
-            <li><a href="Pages/films.html">Films</a></li>
-            <li><a href="Pages/series.html">Séries</a></li>
-            <li><a href="Pages/musiques.html">Musiques</a></li>
-            <li><a href="Pages/litteratures.html">Littératures</a></li>
-            <li style="float:right"><a href="Pages/a_propos.html"> A propos</a></li>
-            <li style="float:right"><a href="Pages/nous_ecrire.html"> Nous écrire</a></li>
-        </ul>
+        </div>
+
+        <div class="navbar__link-toggle">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
+        <nav class="navbar__items">
+            <div>
+                <a href="index.html">Accueil</a>
+            </div>
+            <div>
+                <a href="Pages/anime.html">Anime</a>
+            </div>
+            <div>
+                <a href="Pages/films.html">Films</a>
+            </div>
+            <div>
+                <a href="Pages/series.html">Séries</a>
+            </div>
+            <div>
+                <a href="Pages/musiques.html">Musiques</a>
+            </div>
+            <div>
+                <a href="Pages/litteratures.html">Littératures</a>
+            </div>
+        </nav>
+        <nav class="navbar__items navbar__items--right ">
+            <div><a href="Pages/a_propos.html"> A propos</a></div>
+
+        </nav>
     </div>
-    <div class="flex-container">
-        <div class="card">
-            <h2 class="card-title">Killing Eve</h2>
-            <div class="card-content">
-                <img class="card-image" src="https://fr.web.img6.acsta.net/pictures/21/01/29/17/32/2137037.jpg" />
+    <script src="script.js"></script> <!--Exécution du script js-->
 
-                <p>Eve Polastry est un agent du MI5. Brillante, elle s'ennuie dans son travail.
-                    Villanelle est une tueuse. Brillante elle aussi, elle apprécie son train de vie luxueux.
-                    Lorsque leurs chemins s'entrecroisent, rien ne sera plus jamais comme avant.
-                    <a href="#" class="button">Lire plus</a>
-                </p>
-            </div>
-            <span>
-                <emph>Genre : Série dramatique, British </emph>
-            </span>
+    <!--flex container-->
+    <div style="display: flex; margin-top: 10px;">
+        <div class="block" style="width: 70%;">
+            <H1>Découvrez en ce moment : </H1>
+            <div class=" flex-container">
+                <div class="card">
+                    <h2>Killing Eve</h2>
+                    <div class="card-image">
+                        <img src="https://fr.web.img6.acsta.net/pictures/21/01/29/17/32/2137037.jpg" />
+                    </div>
+                    <div class="card-content">
+                        Eve Polastry est un agent du MI5. Brillante, elle s'ennuie dans son travail.
+                        Villanelle est une tueuse. Brillante elle aussi, elle apprécie son train de vie luxueux.
+                        Lorsque leurs chemins s'entrecroisent, rien ne sera plus jamais comme avant.
+                        <p>
+                            Genre : Série dramatique, British
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">The glory</h2>
+                    <div class="card-image">
+                        <img src="https://www.nautiljon.com/images/drama/00/13/the_glory_part_2_7831.webp" />
+                    </div>
+                    <div class="card-content">
+                        Une jeune femme harcelée au lycée, au point d'arrêter l'école, a longtemps réfléchi au meilleur
+                        moyen de se venger.
+                        Elle devient ainsi enseignante dans une école primaire et
+                        accueille dans sa classe l'enfant de celui qui l'a le plus persécutée.
+                        <p>
+                            Genre : Thriller, Action, Kdrama</emph>
+                        </p>
+                    </div>
 
-        </div>
-        <div class="card">
-            <h2 class="card-title">The glory</h2>
-            <div class="card-content">
-                <img class="card-image" src="https://www.nautiljon.com/images/drama/00/13/the_glory_part_2_7831.webp" />
-                <p>Une jeune femme harcelée au lycée, au point d'arrêter l'école, a longtemps réfléchi au meilleur moyen
-                    de se venger.
-                    Elle devient ainsi enseignante dans une école primaire et
-                    accueille dans sa classe l'enfant de celui qui l'a le plus persécutée.
-                    <a href="#" class="button">Lire plus</a>
-                </p>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">Great pretender</h2>
+                    <div class="card-image">
+                        <img src="https://www.nautiljon.com/images/anime/00/40/great_pretender_8804.webp" />
+                    </div>
+                    <div class="card-content">
+                        Masato Edamura est censé être le plus grand escroc du Japon.
+                        Avec l'aide de Kudo, son partenaire, ils ont essayé d'escroquer un français à Asakusa.
+                        Cependant, leur petit tour s'est retourné contre eux et ils vont désormais être obligés de
+                        travailler pour lui.
+                        Cette fameuse personne qu'ils ont essayé d'escroquer s'avère être Laurent Thierry, un «homme de
+                        confiance» contrôlant la Mafia japonaise.
+                        Edamura est loin de s'imaginer ce qui l'attend après s'être engagé dans les sales affaires du
+                        français...
+                        <p>
+                            Genre : Action, Aventure, Drame, Thriller, Animation</emph>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-            <span>
-                <emph>Genre : Thriller, Action, Kdrama</emph>
-            </span>
-        </div>
-        <div class="card">
-            <h2 class="card-title">Great pretender</h2>
-            <div class="card-content">
-                <img class="card-image" src="https://www.nautiljon.com/images/anime/00/40/great_pretender_8804.webp" />
-                <p>Masato Edamura est censé être le plus grand escroc du Japon.
-                    Avec l'aide de Kudo, son partenaire, ils ont essayé d'escroquer un français à Asakusa.
-                    Cependant, leur petit tour s'est retourné contre eux et ils vont désormais être obligés de
-                    travailler pour lui.
-                    Cette fameuse personne qu'ils ont essayé d'escroquer s'avère être Laurent Thierry, un «homme de
-                    confiance» contrôlant la Mafia japonaise.
-                    Edamura est loin de s'imaginer ce qui l'attend après s'être engagé dans les sales affaires du
-                    français...
-                    <a href="#" class="button">Lire plus</a>
-                </p>
+
+            <div class="flex-container">
+                <div class="card">
+                    <h2 class="card-title">Tower of God</h2>
+                    <div class="card-image">
+                        <img
+                            src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/935ad8e1c044f1164c2af8e18042c2e6.jpeg" />
+                    </div>
+                    <div class="card-content">
+                        La légende veut qu'au sommet de la Tour de Dieu se trouve tout ce que l'on désire.
+                        Rachel représente tout pour Bam, jeune garçon né dans les ténèbres.
+                        Lorsque celle-ci l'abandonne pour entamer l'ascension des 134 étages de la Tour, ce dernier se
+                        lance
+                        à sa poursuite.
+                        La progression graduelle de la Tour ne s'effectue cependant qu'à l'issue d'une épreuve imposée à
+                        chaque étage.
+                        Bam fera la rencontre de différents protagonistes et devra braver tests ardus et situations
+                        mortelles dans son avancée périlleuse. ..
+                        <p>
+                            Genre : Manga, Trahison, Action, Fantaisie </emph>
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="card">
+
+                    <h2 class="card-title">Tétris</h2>
+                    <div class="card-image">
+                        <img src="https://fr.web.img4.acsta.net/pictures/23/03/03/09/57/3773062.jpg" />
+                    </div>
+                    <div class="card-content">
+                        Tiré de la vraie histoire du développeur et promoteur de jeux vidéo Henk Rogers et de sa
+                        rencontre
+                        avec Tetris en 1988.
+                        Lorsqu'il entreprend de faire connaître ce jeu au monde entier,
+                        il plonge dans une dangereuse spirale de mensonges et de corruption derrière le rideau de fer
+                        soviétique...
+                        <p>
+                            Genre : Biopic, Drame, Historique</emph>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Itaewon class</h2>
+                    <div class="card-image">
+                        <img src="https://fr.web.img3.acsta.net/pictures/20/05/07/13/38/3978162.jpg" />
+                    </div>
+                    <div class="card-content">
+                        Lors de son premier jour dans un nouveau lycée, Park Sae Roy frappe l'un de ses camarades, Jang
+                        Geun
+                        Won, pour défendre un élève qui se faisait harceler.
+                        La brute s'avère être le fils du PDG Jang Dae Hee, qui n'est autre que le dirigeant de
+                        l'entreprise
+                        de restauration Jangga, où travaille le père de Park Sae Roy.
+                        Jang Dae Hee exige de Park Sae Roy qu'il présente des excuses à son fils, mais il refuse...
+                        <p>
+                            Genre : Drame, Vengeance, Gastronomie</emph>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-            <span>
-                <emph>Genre : Action, Aventure, Drame, Thriller, Animation</emph>
-            </span>
+        </div>
+
+        <!-- sidepage => Nous écrire -->
+        <div class="block sidepage" style="width: 30%; height: 70%; overflow: auto; margin-top: 10%;">
+
+            <!-- Nos actualités-->
+            <h2> Nos actualités</h2>
+
+            <p>Rien en ce moment ... </p>
+            <div class="scrollbar">
+                <div class="flex-container">
+
+                </div>
+            </div>
+
+            <!-- Social media-->
+
+            <div>
+                <h2> Nos reseaux sociaux</h2>
+                <i class="fa-brands fa-square-twitter fa-2xl" style="color: #39bbeb; padding: 20px;"></i>
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #ed0231; padding: 20px;"></i>
+                <i class="fa-brands fa-discord fa-2xl" style="color: #163c83; padding: 20px;"></i>
+            </div>
+
+
+            <!-- php form-->
+            <div>
+                <h2>Nous contacter</h2>
+                <p>Une remarque? une suggestion? n'hesitez à m'écrire.</p>
+                <form action="../Pages/mail.php" method="post">
+                    <div>
+                        <label for="nom">Votre nom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="cherry-san"> <br><br>
+                    </div>
+                    <div>
+                        <label for="objet">Objet de votre message:</label>
+                        <input type="text" id="objet" name="objet" placeholder="suggestion d'amélioration"
+                            required><br><br>
+                    </div>
+                    <div>
+                        <label for="mail">Votre e-mail (obligatoire):</label>
+                        <input type="email" id="mail" name="mail" placeholder="cherry-san@example.com" required><br><br>
+                    </div>
+                    <div>
+                        <label for="msg">Votre message :</label>
+                        <textarea id="msg" name="msg" maxlength="500"
+                            placeholder="Taille maximale : 500 caractères."></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+
+
         </div>
     </div>
 
-    <div class="flex-container">
-        <div class="card">
-            <h2 class="card-title">Tower of God</h2>
-            <div class="card-content">
-                <img class="card-image"
-                    src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/935ad8e1c044f1164c2af8e18042c2e6.jpeg" />
 
-                <p>La légende veut qu'au sommet de la Tour de Dieu se trouve tout ce que l'on désire.
-                    Rachel représente tout pour Bam, jeune garçon né dans les ténèbres.
-                    Lorsque celle-ci l'abandonne pour entamer l'ascension des 134 étages de la Tour, ce dernier se lance
-                    à sa poursuite.
-                    La progression graduelle de la Tour ne s'effectue cependant qu'à l'issue d'une épreuve imposée à
-                    chaque étage.
-                    Bam fera la rencontre de différents protagonistes et devra braver tests ardus et situations
-                    mortelles dans son avancée périlleuse. ..
-                    <a href="#" class="button">Lire plus</a>
-                </p>
-            </div>
-            <span>
-                <emph>Genre : Manga, Trahison, Action, Fantaisie </emph>
-            </span>
-
-        </div>
-        <div class="card">
-            <h2 class="card-title">Tétris</h2>
-            <div class="card-content">
-                <img class="card-image" src="https://fr.web.img4.acsta.net/pictures/23/03/03/09/57/3773062.jpg" />
-                <p>Tiré de la vraie histoire du développeur et promoteur de jeux vidéo Henk Rogers et de sa rencontre
-                    avec Tetris en 1988.
-                    Lorsqu'il entreprend de faire connaître ce jeu au monde entier,
-                    il plonge dans une dangereuse spirale de mensonges et de corruption derrière le rideau de fer
-                    soviétique...
-                    <a href="#" class="button">Lire plus</a>
-                </p>
-            </div>
-            <span>
-                <emph>Genre : Biopic, Drame, Historique</emph>
-            </span>
-        </div>
-        <div class="card">
-            <h2 class="card-title">Itaewon class</h2>
-            <div class="card-content">
-                <img class="card-image" src="https://fr.web.img3.acsta.net/pictures/20/05/07/13/38/3978162.jpg" />
-                <p>Lors de son premier jour dans un nouveau lycée, Park Sae Roy frappe l'un de ses camarades, Jang Geun
-                    Won, pour défendre un élève qui se faisait harceler.
-                    La brute s'avère être le fils du PDG Jang Dae Hee, qui n'est autre que le dirigeant de l'entreprise
-                    de restauration Jangga, où travaille le père de Park Sae Roy.
-                    Jang Dae Hee exige de Park Sae Roy qu'il présente des excuses à son fils, mais il refuse...
-                    <a href="#" class="button">Lire plus</a>
-                </p>
-            </div>
-            <span>
-                <emph>Genre : Drame, Vengeance, Gastronomie</emph>
-            </span>
-        </div>
-    </div>
-
-    <a href="#" class="button" style="float: right;">&#11014</a>
 
     <footer style="text-align: center;">
         <p>©Copyright cherry-san, tous droits réservés</p>

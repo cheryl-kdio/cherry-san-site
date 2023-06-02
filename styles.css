@@ -1,52 +1,49 @@
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 body {
-  color: white;
-  background-color: black;
-  font-size: 1em;
+  color: black;
+  background-color: #d5bdaf;
+  font-size: 16px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-h2,
-h3 {
-  font-family: cursive;
+h2::after {
+  background-color: white;
+  content: '';
+  display: block;
+  height: 1px;
+  width: auto;
+  margin-bottom: 2px;
 }
 
 /*navigation bar*/
 #logo {
-  display: inline-flexbox;
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
+  width: auto;
+  height: 2em;
 }
 
-ul.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar {
+  background-color: #e3d5ca;
+  display: flex;
+  padding: 16px;
+  font-family: sans-serif;
+  font-size: large;
+  color: white;
   overflow: hidden;
-  background-color: black;
-  border-bottom: 5px solid #c50000;
 }
 
-.menu li,
-#logo {
-  float: left;
+.navbar__items {
+  display: flex;
 }
 
-.menu li a {
+.navbar__items--right {
+  margin-left: auto;
+}
+
+.navbar__link-toggle {
+  display: none;
+}
+
+a {
   display: block;
   color: inherit;
   text-align: center;
@@ -55,8 +52,43 @@ ul.menu {
   text-decoration: none;
 }
 
-.menu li a:hover {
-  background-color: indianred;
+a:hover {
+  background-color: #e29578;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .navbar__items,
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar__items {
+    display: none;
+  }
+
+  .navbar__items--right {
+    margin-left: 0;
+  }
+
+  .navbar__link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .navbar__toggleshow {
+    display: flex;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .sidepage {
+    display: none;
+  }
 }
 
 
@@ -67,83 +99,50 @@ ul.menu {
   margin: auto;
 }
 
-/*Cick button for card*/
-a.button {
-  align-items: center;
-  background-color: #076b02;
-  border: 1px solid #3d4852;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  display: inline-flex;
-  padding: 0.25rem 0.75rem;
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
-  opacity: 0.7;
-}
-
-a.button:hover,
-a.button:focus {
-  background-color: #4bea43;
-  box-shadow: 0 0 2px 2px #bac6d3;
-}
 
 /*card parameters*/
 .card {
-  border: 3px solid #076b02;
+  border: indianred solid;
   padding: 1rem;
   margin: 1rem;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.686);
-}
-
-.card-image {
-  height: 350px;
-  width: 300px;
-  display: block;
-  padding: 5px;
-  margin: auto;
-}
-
-.card-title,
-h1 {
-  font-family: Snell Roundhand, cursive;
-  letter-spacing: 1px;
-  font-size: 30px;
   text-align: center;
-  width: 160px;
-  margin: auto;
-  white-space: nowrap;
-  padding-bottom: 13px;
-}
-
-.card-title:after,
-h1::after {
-  background-color: #c50000;
-  content: '';
-  display: block;
-  height: 3px;
-  width: auto;
-  margin-bottom: 5px;
 }
 
 .card-content {
-  justify-content: space-between;
-  display: block;
-  padding: 2px;
-  font-weight: lighter;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: justify;
+  padding-top: 2px;
 }
 
 .flex-container {
   display: flex;
 }
 
-.flex-container div {
+.flex-container>div {
   flex: 1;
-  padding: 10px;
+  padding: 5px;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-image {
+  height: 300px;
+}
+
+.block {
+  background-color: #e3d5ca;
+  border: #999 solid;
+  border-radius: 30px;
+  padding: 1rem;
+  margin: 1em;
+  height: auto;
+  overflow: auto;
+}
+
+/*scrollbar*/
 .flex-image {
   height: 200px;
   width: 150px;
@@ -160,19 +159,33 @@ h1::after {
   white-space: nowrap;
 }
 
-table,
-th,
-tr {
-  text-align: left;
-  border: 1px solid white;
-  font-weight: lighter;
+
+.scrollbar-image {
+  height: 200px;
+  width: 150px;
+  display: block;
+  padding: 5px;
+  margin: auto;
 }
 
-h2::after {
-  background-color: white;
-  content: '';
-  display: block;
-  height: 1px;
-  width: auto;
-  margin-bottom: 2px;
+
+/*Formulaire*/
+input,
+textarea {
+  font: 1em sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+
+textarea {
+  width: 100%;
+  vertical-align: top;
+  height: 10em;
+}
+
+form div {
+  margin: 5px;
+  font-size: small;
+  padding: 2px;
 }
