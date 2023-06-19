@@ -13,8 +13,8 @@
 <body>
     <!--Navigation bar-->
     <div class="navbar">
-        <div>
-            <img src="images/Cherry-san.png" id="logo">
+        <div class="logo-image">
+            <img src="images/Cherry-san.png">
         </div>
 
         <div class="navbar__link-toggle">
@@ -40,12 +40,82 @@
                 <a href="Pages/litteratures.html">Littératures</a>
             </div>
         </nav>
-        <nav class="navbar__items navbar__items--right ">
-            <div><a href="Pages/a_propos.html"> A propos</a></div>
-
-        </nav>
+        <!--
+            <nav class="navbar__items navbar__items--right ">
+            <div><a href="Pages/a_propos.html">À propos</a></div>
+        </nav> 
+    -->
     </div>
     <script src="script.js"></script> <!--Exécution du script js-->
+
+    <!--Diaporama-->
+    <div class="grid-item">
+        <div style="width: 60%;">
+            <div class="slideshow">
+                <ul>
+                    <li><img src="images/image-1.jpg" alt><span>Description1</span></li>
+                    <li><img src="images/image-2.jpg" alt><span>Description2</span></li>
+                    <li><img src="images/image-3.jpg" alt><span>Description3</span></li>
+                    <li><img src="images/image-4.jpg" alt><span>Description4</span></li>
+                    <li><img src="images/image-5.jpg" alt><span>Description5</span></li>
+                </ul>
+                <div class="barre_progression"></div>
+            </div>
+        </div>
+        <div style="width: 30%; height: 70%; overflow: auto;">
+            <!-- Nos actualités-->
+            <div class="block">
+                <!-- Nos actualités-->
+                <h2> Nos actualités</h2>
+
+                <p>Rien en ce moment ... </p>
+
+
+                <!-- Social media-->
+
+                <div>
+                    <h2> Nos reseaux sociaux</h2>
+                    <a href="https://twitter.com/ur_cherry_san"><i class="fa-brands fa-square-twitter fa-2xl"
+                            style="color: #39bbeb; padding: 20px;"></i></a>
+                    <i class="fa-brands fa-instagram fa-2xl" style="color: #ed0231; padding: 20px;"></i>
+                    <i class="fa-brands fa-discord fa-2xl" style="color: #163c83; padding: 20px;"></i>
+                </div>
+
+                <!-- 
+                <div>
+                    <h2>Nous contacter</h2>
+                    <p>Une remarque? une suggestion? n'hesitez à m'écrire.</p>
+                    <form action="../Pages/mail.php" method="post">
+                        <div>
+                            <label for="nom">Votre nom :</label>
+                            <input type="text" id="nom" name="nom" placeholder="cherry-san"> <br><br>
+                        </div>
+                        <div>
+                            <label for="objet">Objet de votre message:</label>
+                            <input type="text" id="objet" name="objet" placeholder="suggestion d'amélioration"
+                                required><br><br>
+                        </div>
+                        <div>
+                            <label for="mail">Votre e-mail (obligatoire):</label>
+                            <input type="email" id="mail" name="mail" placeholder="cherry-san@example.com"
+                                required><br><br>
+                        </div>
+                        <div>
+                            <label for="msg">Votre message :</label>
+                            <textarea id="msg" name="msg" maxlength="500"
+                                placeholder="Taille maximale : 500 caractères."></textarea>
+                        </div>
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
 
     <!--flex container-->
     <div style="display: flex; margin-top: 10px;">
