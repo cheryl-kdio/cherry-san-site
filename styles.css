@@ -43,7 +43,7 @@ h2::after {
   display: none;
 }
 
-a {
+.navbar__items a {
   display: block;
   color: inherit;
   text-align: center;
@@ -52,7 +52,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.navbar__items a:hover {
   background-color: #e29578;
 }
 
@@ -136,11 +136,25 @@ img {
   background-color: #e3d5ca;
   border: #999 solid;
   border-radius: 30px;
-  padding: 1rem;
+  padding: 1em;
   margin: 1em;
+  text-align: justify;
   height: auto;
   overflow: auto;
 }
+
+.tg th {
+  border: 1px solid black;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top
+}
+
 
 /*scrollbar*/
 .flex-image {
