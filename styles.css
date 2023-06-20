@@ -1,16 +1,115 @@
+ol {
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  margin: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+li {
+  color: #4F4F4F;
+  padding-left: 16px;
+  margin-top: 24px;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+strong {
+  color: #292929;
+}
+
+/**/
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.outer-wrapper {
+  max-width: 100%;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-color: #d5ac68 #f1db9d;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.inner-wrapper {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.pseudo-item {
+  height: 300px;
+  width: 209px;
+  margin-right: 59px;
+  flex-shrink: 0;
+  background-color: #ffb4a2;
+}
+
+.pseudo-item:nth-of-type(2n) {
+  background-color: #e5989b;
+}
+
+/**/
 body {
   color: black;
   background: url("images/bg.png");
   font-size: 16px;
 }
 
-h2::after {
-  background-color: white;
-  content: '';
-  display: block;
-  height: 1px;
-  width: auto;
-  margin-bottom: 2px;
+
+h1 {
+  color: #d54d7b;
+  font-size: 40px;
+  font-family: 'Rouge Script', cursive;
+  font-weight: normal;
+  text-shadow: 0 4px 4px #fff;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: inherit;
+  font-family: "Libre Baskerville", serif;
+  text-shadow: 0 1px 1px #fff;
+}
+
+
+/* CSS */
+button {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
 }
 
 /*navigation bar*/
@@ -22,6 +121,7 @@ h2::after {
   display: flex;
   font-family: sans-serif;
   overflow: hidden;
+  box-shadow: 0 1px 5px #e5989b;
 }
 
 .logo-image {
@@ -35,9 +135,6 @@ h2::after {
   display: flex;
 }
 
-.navbar__items--right {
-  margin-left: auto;
-}
 
 .navbar__link-toggle {
   display: none;
@@ -46,17 +143,12 @@ h2::after {
 .navbar__items a {
   display: block;
   color: inherit;
-  text-align: center;
   padding: 14px 16px;
   font-weight: 700;
   text-decoration: none;
 }
 
-.navbar__items a:hover {
-  background-color: #e5989b;
-  border-radius: 20%;
-  border: 1px solid black;
-}
+
 
 @media only screen and (max-width: 768px) {
 
@@ -69,9 +161,6 @@ h2::after {
     display: none;
   }
 
-  .navbar__items--right {
-    margin-left: 0;
-  }
 
   .navbar__link-toggle {
     align-self: flex-end;
@@ -88,9 +177,6 @@ h2::after {
     flex-direction: column;
   }
 
-  .sidepage {
-    display: none;
-  }
 }
 
 
@@ -135,14 +221,15 @@ img {
 }
 
 .block {
-  background-color: #e3d5ca;
-  border: #999 solid;
+  border: #e5989b solid;
   border-radius: 30px;
-  padding: 1em;
-  margin: 1em;
   text-align: justify;
   height: auto;
+  background-color: #e5989b;
   overflow: auto;
+  margin-top: 10%;
+  padding: 10px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .tg th {
@@ -213,24 +300,18 @@ form div {
   box-sizing: border-box
 }
 
-img {
-
-  max-width: 100%
-}
-
 
 .slideshow {
 
   border: 5px solid white;
   box-shadow: 0 0 5px hsla(0, 0%, 0%, .5);
   overflow: hidden;
-  max-width: 600px;
+  max-width: 700px;
   margin: 2rem auto;
   position: relative
 }
 
 .slideshow ul {
-
   padding-bottom: 66.67%;
   /* ratio pour le responsive */
   margin: 0;
@@ -240,35 +321,29 @@ img {
 
 
 .slideshow li {
-
   top: 0;
   left: 0;
+  bottom: 0;
   animation: slideshow 25s ease infinite;
   position: absolute;
   opacity: 0;
-
-
 }
 
 
 
 .slideshow li:nth-child(2) {
-
   animation-delay: 5s
 }
 
 .slideshow li:nth-child(3) {
-
   animation-delay: 10s
 }
 
 .slideshow li:nth-child(4) {
-
   animation-delay: 15s
 }
 
 .slideshow li:nth-child(5) {
-
   animation-delay: 20s
 }
 
@@ -299,9 +374,8 @@ img {
 
 
 .slideshow span {
-
   background: rgba(0, 0, 0, 0.7);
-  height: 40px;
+  height: 60px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -316,8 +390,8 @@ img {
 .barre_progression {
   position: absolute;
   left: 0;
-  bottom: 40px;
-  height: 5px;
+  bottom: 62px;
+  height: 9px;
   background: white;
   animation: barre_progression 25s ease-out infinite;
 
@@ -372,9 +446,4 @@ img {
     opacity: 0
   }
 
-}
-
-/*Grid*/
-.grid-item {
-  display: flex;
 }
