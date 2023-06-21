@@ -1,61 +1,3 @@
-ol {
-  font-family: 'Space Mono', monospace;
-  display: flex;
-  flex-direction: column;
-  max-width: 420px;
-  margin: 10px;
-  border: 1px solid #eee;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
-}
-
-li {
-  color: #4F4F4F;
-  padding-left: 16px;
-  margin-top: 24px;
-  position: relative;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-strong {
-  color: #292929;
-}
-
-/**/
-section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.outer-wrapper {
-  max-width: 100%;
-  overflow-x: scroll;
-  position: relative;
-  scrollbar-color: #d5ac68 #f1db9d;
-  scrollbar-width: thin;
-  -ms-overflow-style: none;
-}
-
-.inner-wrapper {
-  display: flex;
-  padding-bottom: 10px;
-}
-
-.pseudo-item {
-  height: 300px;
-  width: 209px;
-  margin-right: 59px;
-  flex-shrink: 0;
-  background-color: #ffb4a2;
-}
-
-.pseudo-item:nth-of-type(2n) {
-  background-color: #e5989b;
-}
-
 /**/
 body {
   color: black;
@@ -148,7 +90,9 @@ button {
   text-decoration: none;
 }
 
-
+.navbar__items--right {
+  margin-left: auto;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -177,6 +121,10 @@ button {
     flex-direction: column;
   }
 
+  .navbar__items--right {
+    margin-left: 0;
+  }
+
 }
 
 
@@ -202,7 +150,7 @@ button {
 }
 
 .flex-container {
-  display: flex;
+  display: inline-flex;
 }
 
 .flex-container>div {
@@ -214,6 +162,10 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.49);
 }
 
 .card-image {
@@ -230,45 +182,6 @@ img {
   margin-top: 10%;
   padding: 10px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
-
-.tg th {
-  border: 1px solid black;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 10px 5px;
-}
-
-.tg .tg-0lax {
-  text-align: left;
-  vertical-align: top
-}
-
-
-/*scrollbar*/
-.flex-image {
-  height: 200px;
-  width: 150px;
-  display: block;
-  padding: 5px;
-  margin: auto;
-}
-
-.scrollbar {
-  height: 100%;
-  width: 100%;
-  overflow-x: auto;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-
-.scrollbar-image {
-  height: 200px;
-  width: 150px;
-  display: block;
-  padding: 5px;
-  margin: auto;
 }
 
 
@@ -294,17 +207,12 @@ form div {
 }
 
 /*carrousel*/
-
-
 * {
   box-sizing: border-box
 }
 
 
 .slideshow {
-
-  border: 5px solid white;
-  box-shadow: 0 0 5px hsla(0, 0%, 0%, .5);
   overflow: hidden;
   max-width: 700px;
   margin: 2rem auto;
@@ -323,7 +231,7 @@ form div {
 .slideshow li {
   top: 0;
   left: 0;
-  bottom: 0;
+  right: 0;
   animation: slideshow 25s ease infinite;
   position: absolute;
   opacity: 0;
@@ -383,67 +291,151 @@ form div {
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 0
-}
-
-/*****barre progression *****/
-.barre_progression {
-  position: absolute;
   left: 0;
-  bottom: 62px;
-  height: 9px;
-  background: white;
-  animation: barre_progression 25s ease-out infinite;
-
 }
 
-/*****animation barre progression *****/
-@keyframes barre_progression {
+/* Musics cards*/
+ol {
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  margin: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+}
 
-  0%,
-  20%,
-  40%,
-  60%,
-  80%,
-  100% {
-    width: 0%;
-    opacity: 0
-  }
+li {
+  color: #4F4F4F;
+  padding-left: 16px;
+  margin-top: 24px;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+}
 
-  4%,
-  24%,
-  44%,
-  64%,
-  84% {
-    width: 0%;
-    opacity: .3
-  }
+strong {
+  color: #292929;
+}
 
-  16%,
-  36%,
-  56%,
-  76%,
-  96% {
-    width: 100%;
-    opacity: .7
-  }
+/* scrollbar image*/
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-  17%,
-  37%,
-  57%,
-  77%,
-  97% {
-    width: 100%;
-    opacity: .3
-  }
+.outer-wrapper {
+  max-width: 100%;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-color: #d5ac68 #f1db9d;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
 
-  18%,
-  38%,
-  58%,
-  78%,
-  98% {
-    width: 100%;
-    opacity: 0
-  }
+.inner-wrapper {
+  display: flex;
+  padding-bottom: 10px;
+}
 
+.pseudo-item {
+  height: 300px;
+  width: 200px;
+  margin-right: 59px;
+  flex-shrink: 0;
+}
+
+
+/**/
+.card-bottom {
+  width: 200px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  visibility: hidden;
+  background-color: rgba(110, 122, 92, 0);
+  padding: 10px 20px;
+  color: #fff;
+  transform: translate(100%, -50%);
+}
+
+.top-text {
+  font-size: 20px;
+  top: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bottom-text {
+  font-size: 12px;
+}
+
+.pseudo-item:hover img {
+  filter: blur(1.4px);
+  overflow: hidden;
+  transition: all 0.3s linear;
+  box-shadow: inset -6px -1px 32px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pseudo-item:hover .card-bottom {
+  transform: translate(0%, -50%);
+  visibility: visible;
+  transition: all 0.8s ease;
+  background-color: rgba(110, 122, 92, 0.7);
+}
+
+/**/
+.rating-group {
+  display: inline-flex;
+}
+
+/* make hover effect work properly in IE */
+.rating__icon {
+  pointer-events: none;
+}
+
+/* hide radio inputs */
+.rating__input {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* set icon padding and size */
+.rating__label {
+  cursor: pointer;
+  padding: 0 0.1em;
+  font-size: 1rem;
+}
+
+/* set default star color */
+.rating__icon--star {
+  color: orange;
+}
+
+/* set color of none icon when unchecked */
+.rating__icon--none {
+  color: #eee;
+}
+
+/* if any input is checked, make its following siblings grey */
+.rating__input:checked~.rating__label .rating__icon--star {
+  color: #ddd;
+}
+
+/* make all stars orange on rating group hover */
+.rating-group:hover .rating__label .rating__icon--star {
+  color: orange;
+}
+
+/* make hovered input's following siblings grey on hover */
+.rating__input:hover~.rating__label .rating__icon--star {
+  color: #ddd;
+}
+
+/* make none icon grey on rating group hover */
+.rating-group:hover .rating__input--none:not(:hover)+.rating__label .rating__icon--none {
+  color: #eee;
 }
