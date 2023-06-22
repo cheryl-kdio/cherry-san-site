@@ -123,7 +123,7 @@
                         <br>
                         <button class="button">Noter</button>
 
-                        <div id="full-stars-example-two">
+                        <div>
                             <div class="rating-group">
                                 <input disabled checked class="rating__input rating__input--none" name="rating3"
                                     id="rating3-none" value="0" type="radio">
@@ -279,6 +279,34 @@
                     tuer tout de suite)</p>
             </li>
         </ol>
+    </div>
+    <div>
+        <?php
+        require("Connect.php");
+        $connexion = mysqli_connect(SERVEUR, NOM, PASSE);
+        if (!$connexion) {
+            echo "Désolé, connexion à " . SERVEUR . " impossible \n";
+            exit;
+        }
+    
+        if (!mysqli_select_db($connexion,BASE)) {
+            echo "Désolé, accès à la base " . BASE . " impossible \n";
+            exit;
+        }
+    
+        $resultat = mysqli_query($connexion,"SELECT * FROM FilmSimple");
+    
+        if ($resultat) {
+            while ($film = mysqli_fetch_object($resultat)) {
+                echo "$film->titre,paru en $film->annee, réalisé "
+                    . "par $film->prenom_realisateur $film->nom_realisateur.<br/>\n";
+            }
+        } else {
+            echo "<b> Erreur dans l'exécution de la requête.</b><br/>";
+            echo "<b> Message de MySQL : </b>" . mysqli_error($connexion);
+        }
+        
+        ?>
     </div>
 
     <footer style="text-align: center;">
